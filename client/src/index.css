@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0f1a;
+  --surface:   #151829;
+  --card:      #1c2038;
+  --border:    rgba(255,255,255,0.07);
+  --accent1:   #6c63ff;
+  --accent2:   #00d4aa;
+  --accent3:   #ff6584;
+  --accent4:   #ffd166;
+  --text:      #e8eaf6;
+  --text-sub:  #8892b0;
+  --green:     #4caf87;
+  --red:       #e05c7c;
+  --radius:    14px;
+  --shadow:    0 8px 32px rgba(0,0,0,0.4);
+  --trans:     all 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--accent1); border-radius: 99px; }
+
+/* ── Utility ─────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.tag-purple { background: rgba(108,99,255,0.2); color: var(--accent1); border: 1px solid rgba(108,99,255,0.35); }
+.tag-teal   { background: rgba(0,212,170,0.15); color: var(--accent2); border: 1px solid rgba(0,212,170,0.35); }
+.tag-pink   { background: rgba(255,101,132,0.15); color: var(--accent3); border: 1px solid rgba(255,101,132,0.3); }
