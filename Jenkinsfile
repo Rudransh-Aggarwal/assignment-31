@@ -8,6 +8,13 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                bat 'cd server && npm install && cd ..'
+                bat 'cd client && npm install && cd ..'
+            }
+        }
+
         stage('Build') {
             steps {
                 bat 'docker compose build'
